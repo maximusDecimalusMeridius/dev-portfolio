@@ -6,6 +6,10 @@
     --h2: 28px;
 }
 
+html {
+    min-width: 400px;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -60,18 +64,35 @@ header {
     margin-right: 20px;
 }
 
-.site-nav-item {
+.site-nav-link {
+    text-decoration: none;
+    margin-right: 10px;
     width: fit-content;
     height: 25px;
     border-bottom: 3px solid var(--banner-inset-color);
     text-align: center;
-    margin: 35px 10px 0px 0px;
+    margin-top: 35px;
     padding: 0 10px;
+    position: relative;
+    color: var(--banner-inset-color);
+    color: var(--banner-inset-color);
 }
 
-.site-nav-item a {
-    color: var(--banner-inset-color);
-    text-decoration: none;
+.site-nav-item:hover {
+    color: white;
+}
+
+.site-nav-item:hover::after{
+    width: 100%;
+    content: " ";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border: 1px solid white;
+}
+
+.site-nav-item:active::after {
+    border: 1px solid rgb(14, 0, 207);
 }
 
 .hero {
@@ -217,7 +238,7 @@ main {
         margin: 0px;
     }
 
-    .site-nav-item {
+    .site-nav-link {
         margin-top: 8px;
         margin-bottom: 0px;
     }
