@@ -1,0 +1,174 @@
+:root {
+    --banner-header-color: rgb(49 52 61);
+    --banner-inset-color: rgb(145 203 205);
+    --title-color: rgb(42 52 76);
+    --h1: 30px;
+    --h2: 24px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(238 238 246);
+    color: rgb(42 52 76);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--banner-header-color);
+}
+
+.header-title {
+    width: 300px;
+    height: 40px;
+    background-color: var(--banner-inset-color);
+    color: var(--title-color);
+    display: inline;
+    float: left;
+    margin-top: 15px;
+    padding: 5px 0px 0px 40px;
+    font-size: var(--h1);
+}
+
+.site-nav-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.site-nav-item {
+    width: fit-content;
+    height: 25px;
+    border-bottom: 3px solid var(--banner-inset-color);
+    text-align: center;
+    margin: 35px 10px 10px 0px;
+    padding: 0 10px;
+}
+
+.site-nav-item a {
+    color: var(--banner-inset-color);
+    text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+    height: 200px;
+    background-image: url(https://media.discordapp.net/attachments/989718721465569330/1053516551438999643/image.png?width=1149&height=525);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-title {
+    width: 300px;
+    height: 40px;
+    background-color: var(--banner-inset-color);
+    display: inline;
+    float: right;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding-top: 10px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.section-title {
+    min-height: 50px;
+    width: 30%;
+    min-width: 200px;
+    background-color: red;
+    margin-bottom: 30px;
+    border-right: 2px solid var(--title-color);
+    text-align: right;
+    padding-right: 10px;
+}
+
+.section-content{
+    width: 70%;
+    height: fit-content;
+    padding: 0px 20px 40px 20px;
+}
+
+#work-cards {
+    display: grid;
+    grid-template:
+                "work-card-1 work-card-1" 200px
+                "work-card-2 work-card-3" 75px
+                "work-card-4 work-card-5" 75px
+                ;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+#work-card-1 {
+    width: 100%;
+    background-color: blue;
+    grid-area: work-card-1;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+
+#work-card-2 {
+    width: 100%;
+    background-color: yellow;
+    grid-area: work-card-2;
+    /* grid-column-start: 1;
+    grid-column-end: 2; */
+}
+
+#work-card-3 {
+    width: 100%;
+    background-color: green;
+    grid-area: work-card-3;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
+
+#work-card-4 {
+    width: 100%;
+    background-color: green;
+    grid-area: work-card-4;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
+
+#work-card-5 {
+    width: 100%;
+    background-color: green;
+    grid-area: work-card-5;
+    /* grid-column-start: 2;
+    grid-column-end: 3; */
+}
