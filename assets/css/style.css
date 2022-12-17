@@ -7,7 +7,7 @@
 }
 
 html {
-    min-width: 400px;
+    min-width: 375px;
 }
 
 *, *::before, *::after {
@@ -66,8 +66,8 @@ header {
 
 .site-nav-link {
     text-decoration: none;
-    margin-right: 10px;
     width: fit-content;
+    margin-right: 10px;
     height: 25px;
     border-bottom: 3px solid var(--banner-inset-color);
     text-align: center;
@@ -75,14 +75,13 @@ header {
     padding: 0 10px;
     position: relative;
     color: var(--banner-inset-color);
-    color: var(--banner-inset-color);
 }
 
-.site-nav-item:hover {
+.site-nav-link:hover {
     color: white;
 }
 
-.site-nav-item:hover::after{
+.site-nav-link:hover::after{
     width: 100%;
     content: " ";
     position: absolute;
@@ -156,17 +155,28 @@ main {
     display: grid;
     grid-template:
                 "work-card-1 work-card-1" 300px
-                "work-card-2 work-card-3" 100px
+                "work-card-2 work-card-3" 150px
                 "work-card-4 work-card-5" 100px
                 ;
     row-gap: 10px;
     column-gap: 10px;
 }
 
+.work-card {
+    border: 4px solid var(--banner-inset-color);
+    border-radius: 2px;
+    opacity: .8;
+    transition: opacity .2s linear;
+}
+
+.work-card:hover {
+    opacity: 1;
+}
+
 #work-card-1 {
     width: 100%;
-    background-color: blue;
     grid-area: work-card-1;
+    background-color: red;
     /* grid-column-start: 1;
     grid-column-end: 3; */
 }
@@ -203,10 +213,27 @@ main {
     grid-column-end: 3; */
 }
 
+#contact-item-1 {
+    grid-area: contact-item-1;
+}
+
+#contact-item-2 {
+    grid-area: contact-item-2;
+}
+
+#contact-item-3 {
+    grid-area: contact-item-3;
+}
+
+#contact-item-4 {
+    grid-area: contact-item-4;
+}
+
 .contact-nav-menu {
-    height: 100px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-evenly;
     align-items: end;
@@ -236,6 +263,10 @@ main {
         justify-content: center;
         list-style-type: none;
         margin: 0px;
+    }
+
+    .nav-menu-item {
+        margin-right: 0px;
     }
 
     .site-nav-link {
@@ -272,6 +303,15 @@ main {
         width: 200px;
         min-width: 150px;
     }
+
+    .contact-nav-menu {
+        display: grid;
+        grid-template: 
+                    "contact-item-1 contact-item-2" 100px
+                    "contact-item-3 contact-item-4" 100px
+                    ;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
