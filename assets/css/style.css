@@ -198,7 +198,7 @@ queries <= 480 pixels */
 .work-card-title {
     position: absolute;
     left: 0;
-    bottom: 20px;
+    bottom: 10px;
     width: fit-content;
     height: fit-content;
     background-color: var(--banner-inset-color);
@@ -230,15 +230,33 @@ queries <= 480 pixels */
     font-style: italic;;
 }
 
+.open-in-new-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: teal;
+    transition: all .2s ease-in-out;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px 0px rgba(255, 255, 255, 1);
+}
+
+.open-in-new-icon:hover,
+.open-in-new-icon:active {
+    transform: scale(1.2);
+    box-shadow: 1px 1px 8px 0px rgba(255, 255, 255, .6);
+}
+
 #work-card-img-1 {
-    background-image: url('https://cdn.discordapp.com/attachments/989718721465569330/1047521105507795024/Dienasty_an_isometric_view_from_behind_of_a_corporate_worker_wo_cce2727c-1d5d-44b5-9b27-a3e030434cd1.png');
+    background-image: url("https://cdn.discordapp.com/attachments/989718721465569330/1047521105507795024/Dienasty_an_isometric_view_from_behind_of_a_corporate_worker_wo_cce2727c-1d5d-44b5-9b27-a3e030434cd1.png");
 }
 
 #work-card-img-2 {
-    background-image: url('https://cdn.discordapp.com/attachments/989718721465569330/1047521105507795024/Dienasty_an_isometric_view_from_behind_of_a_corporate_worker_wo_cce2727c-1d5d-44b5-9b27-a3e030434cd1.png');
+    background-image: url("https://media.discordapp.net/attachments/1012758410393034939/1053973232602058832/image.png");
 }
 #work-card-img-3 {
-    background-image: url('https://cdn.discordapp.com/attachments/989718721465569330/1047521105507795024/Dienasty_an_isometric_view_from_behind_of_a_corporate_worker_wo_cce2727c-1d5d-44b5-9b27-a3e030434cd1.png');
+    background-image: url("https://media.discordapp.net/attachments/1012758410393034939/1053976513994838016/image.png");
 
 }
 #work-card-img-4 {
