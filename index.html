@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-    <!-- Header with a site title and navigation menu with x items -->
+    <!-- Header with a site title and navigation menu with x items
+    Responsive CSS centers menu and title < 768 pixels -->
     <header>
-        <h1 class="header-title">Well hello, there!</h1>
+        <h1 class="header-title">Well, hello there!</h1>
         <ul class="site-nav-menu">
             <a href="./index.html" class="site-nav-link"><li class="site-nav-item" id="nav-item-1">About Me</li></a>
             <a href="#work" class="site-nav-link"><li class="site-nav-item" id="nav-item-2">Work</li></a>
@@ -18,31 +19,40 @@
             <a href="https://andygs-resume.netlify.app" target="_blank" class="site-nav-link"><li class="site-nav-item" id="nav-item-4">Resume</li></a>
         </ul>
     </header>
-    <!-- Fix aria-label for hero class -->
-    <div class="hero" aria-label="Banner of ...">
+    
+    <!-- Responsive banner image set to cover the available size w/ site subtitle -->
+    <div class="hero" aria-label="Banner image of a trailer decorated for the holidays">
         <h2 class="hero-title">Andy Gaudy - HTML/CSS/JS/React</h2>
     </div>
 
-    <!-- Main section for all section cards containing a subtitle on the left and content (text or image) to the right -->
+    <!-- Main section for 4 section cards containing a subtitle on the left and content
+         (text or images) to the right.  Flex direction row > 480 pixels, column =< 480 pixels -->
     <main>
+        <!-- Section card 1 -->
         <section class="section-card">
-            <div class="section-title" id="">
+            <div class="section-title">
                 <h2>
+                    <!-- pre text justified to the right with CSS -->
                     <pre class="pre-text">
 About
 Me
                     </pre>
+                    <!-- hidden p text displayed inline, centered for @media < 480 pixels -->
                     <p class="p-text">About Me</p>
                 </h2>
             </div>
-            <div class="section-content" id="">
-                <!-- Using span target to prevent document link from pushing content under the sticky header -->
+            <div class="section-content">
+                <!-- Using span/id for #work link to prevent document
+                    from pushing content under the sticky header -->
                 <span id="work"></span>
                 <p>Former Marine turned passionate tech nut.  Family man with a drive for team success by embracing a growth mindset, providing support, and never saying "that's not my job"</p>
             </div>
         </section>
+        
+        <!-- Section card 2 -->
+        <!-- Grid layout > 768 pixels, Flexbox layout < 768 pixels -->
         <section class="section-card">
-            <div class="section-title" id="">
+            <div class="section-title">
                 <h2>
                     <pre class="pre-text">
 Work
@@ -58,6 +68,9 @@ Work
                 <div class="work-card" id="work-card-5"></div>
             </div>
         </section>
+
+        <!-- Section card 3 -->
+        <!-- Displayed with flexbox > 768 pixels, grid <= 768 pixels -->
         <section class="section-card">
             <div class="section-title" id="contact-me">
                 <h2>
@@ -68,29 +81,31 @@ Me
                     <p class="p-text">Contact Me</p>
                 </h2>
             </div>
-            <div class="section-content" id="">
-                <ul class="contact-nav-menu">
-                    <li id="contact-item-1" class="contact-nav-item">
+            <div class="section-content">
+                <ul class="contacts">
+                    <li id="contact-item-1" class="contact-item">
                         <p>Phone</p>
                         <a href=""></a>
                     </li>
-                    <li id="contact-item-2" class="contact-nav-item">
+                    <li id="contact-item-2" class="contact-item">
                         <p>Email</p>
                         <a href="mailto:mail@mail.com"></a>
                     </li>
-                    <li id="contact-item-3" class="contact-nav-item">
+                    <li id="contact-item-3" class="contact-item">
                         <p>Visit my</p>
                         <a href="https://www.github.com/maximusdecimalusmeridius">GitHub</a>
                     </li>
-                    <li id="contact-item-4" class="contact-nav-item">
+                    <li id="contact-item-4" class="contact-item">
                         <p>Check out my</p>
                         <a href="https://www.linkedin.com/the-recruiter-that-is-technical">LinkedIn Profile</a>
                     </li>
                 </ul>
             </div>
         </section>
+
+        <!-- Section card 4 -->
         <section class="section-card">
-            <div class="section-title" id="">
+            <div class="section-title">
                 <h2>
                     <pre class="pre-text">
 Special
@@ -100,10 +115,11 @@ To
                     <p class="p-text">Special Thanks To</p>
                 </h2>
             </div>
-            <div class="section-content" id="">
+            <div class="section-content">
                 <div class="content-placholder"></div>
             </div>
         </section>
+
     </main>
 </body>
 </html>

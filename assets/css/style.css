@@ -1,3 +1,4 @@
+/* Set global variables for color scheme and header fonts */
 :root {
     --banner-header-color: rgb(49 52 61);
     --banner-inset-color: rgb(145 203 205);
@@ -6,6 +7,7 @@
     --h2: 28px;
 }
 
+/* Reset CSS and set main body formatting*/
 html {
     min-width: 375px;
 }
@@ -32,6 +34,7 @@ body {
     font-size: 14px;
 }
 
+/* Create a header with left justified title and a formatted ul nav-menu */
 header {
     width: 100%;
     height: 80px;
@@ -77,6 +80,8 @@ header {
     color: var(--banner-inset-color);
 }
 
+/* Hovering over the li items (buttons) in the site nave menu
+turns text white and adds a white bottom border pseudo element */
 .site-nav-link:hover {
     color: white;
 }
@@ -94,6 +99,7 @@ header {
     border: 1px solid rgb(14, 0, 207);
 }
 
+/* Hero banner CSS */
 .hero {
     display: block;
     width: 100%;
@@ -116,12 +122,15 @@ header {
     text-align: center;
 }
 
+/* Setting main to flex to create a column of section cards */
 main {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
 
+/* Section cards are composed of two sections - title (30% width) and content (70% width)
+Flex direction changed to column for @media queries < 480 pixels */
 .section-card {
     height: fit-content;
     display: flex;
@@ -141,6 +150,8 @@ main {
     font-weight: bold;
 }
 
+/* Hidden alternate section card titles that will display inline for @media
+queries <= 480 pixels */
 .p-text {
     display: none;
 }
@@ -151,6 +162,7 @@ main {
     padding: 0px 20px;
 }
 
+/* Initial grid template for work card divs */
 #work-cards {
     display: grid;
     grid-template:
@@ -165,54 +177,40 @@ main {
 .work-card {
     border: 4px solid var(--banner-inset-color);
     border-radius: 2px;
-    opacity: .8;
-    transition: opacity .2s linear;
 }
 
-.work-card:hover {
-    opacity: 1;
-}
-
+/* Work card grid area assignments and project card styling*/
 #work-card-1 {
     width: 100%;
     grid-area: work-card-1;
     background-color: red;
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
 }
 
 #work-card-2 {
     width: 100%;
     background-color: yellow;
     grid-area: work-card-2;
-    /* grid-column-start: 1;
-    grid-column-end: 2; */
 }
 
 #work-card-3 {
     width: 100%;
     background-color: green;
     grid-area: work-card-3;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
 #work-card-4 {
     width: 100%;
     background-color: rgb(128, 0, 0);
     grid-area: work-card-4;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
 #work-card-5 {
     width: 100%;
     background-color: rgb(32, 214, 47);
     grid-area: work-card-5;
-    /* grid-column-start: 2;
-    grid-column-end: 3; */
 }
 
+/* Contact item grid area assignments */
 #contact-item-1 {
     grid-area: contact-item-1;
 }
@@ -229,7 +227,7 @@ main {
     grid-area: contact-item-4;
 }
 
-.contact-nav-menu {
+.contacts {
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -239,12 +237,17 @@ main {
     align-items: end;
 }
 
-.contact-nav-item {
+.contact-item {
     width: 100px;
     height: 100px;
     border: 1px solid white;
 }
 
+/* CSS for 481 =< 768 pixels
+Center header subtitle and site nav menu
+Center and reposition hero subtitle
+Change display property of work-card container to flex and direction to column
+Create 2x2 grid layout for contact information */
 @media screen and (max-width: 768px) {
     .header-title {
         display: block;
@@ -304,7 +307,7 @@ main {
         min-width: 150px;
     }
 
-    .contact-nav-menu {
+    .contacts {
         display: grid;
         grid-template: 
                     "contact-item-1 contact-item-2" 100px
@@ -313,6 +316,8 @@ main {
     }
 }
 
+/* CSS for screens <= 480 pixels
+Stacks all titles and content vertically */
 @media screen and (max-width: 480px) {
     .section-card {
         height: fit-content;
