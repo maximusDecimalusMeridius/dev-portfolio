@@ -432,7 +432,7 @@ footer {
     /* border: 1px solid var(--banner-header-color); */
     border-radius: 50%;
     z-index: 2;
-    background-image: url("./assets/images/profile-pic.jpg");
+    background-image: url("../images/profile-pic.jpg");
     background-size: contain;
     animation: bounce-animation 3s infinite;
     transition: width .2s ease-in, height .2s ease-in;
