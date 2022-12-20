@@ -21,7 +21,7 @@
 
 /* Reset CSS and set main body formatting*/
 html {
-    min-width: 375px;
+    min-width: 325px;
 }
 
 *, *::before, *::after {
@@ -72,6 +72,7 @@ header {
     margin-top: 15px;
     padding: 3px 0px 0px 20px;
     font-size: var(--h1);
+    box-shadow: 2px 3px 12px white;
 }
 
 .site-nav-menu {
@@ -95,6 +96,8 @@ header {
     padding: 0 10px;
     position: relative;
     color: var(--banner-inset-color);
+    white-space: nowrap;
+    transition: margin-right .2s linear;
 }
 
 /* Hovering over the li items (buttons) in the site nave menu
@@ -211,6 +214,7 @@ queries <= 480 pixels */
     background-color: var(--banner-inset-color);
     color: white;
     padding: 0px 5px 3px 10px;
+    text-shadow: 2px 1px 3px black;
 }
 
 /* Default to 90% opacity for hazy appearance, 100% opacity when active or hovered */
@@ -399,16 +403,26 @@ queries <= 480 pixels */
     height: fit-content;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     list-style-type: none;
     justify-content: space-evenly;
-    align-items: end;
+    align-items: center;
     text-align: center;
+}
+
+.thanks-item {
+    padding: 20px;
+    margin: 0px 10px;
+}
+
+.thanks-item > p {
+    margin-bottom: 4px;
 }
 
 .thanks-item h3 {
     font-size: var(--h3);
-    margin-bottom: 3px;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 /* Footer CSS */
@@ -460,6 +474,7 @@ Create 2x2 grid layout for contact information */
         margin: 0 auto;
         padding: 0;
         text-align: center;
+        box-shadow: 0px 0px 14px 3px white;
     }
 
     .hero {
@@ -534,6 +549,10 @@ Create 2x2 grid layout for contact information */
         left: 25px;
         bottom: 25px;
     }
+
+    #thanks{
+        flex-direction: column;
+    }
 }
 
 /* CSS for screens <= 480 pixels
@@ -578,6 +597,12 @@ Stacks all titles and content vertically */
         display: block;
     }
 
+}
+
+@media screen and (max-width: 360px){
+    .site-nav-link{
+        margin-right: 0px;
+    }
 }
 
 /* @keyframes bounce-animation {
