@@ -41,14 +41,6 @@ THEN I am taken to that deployed application
 WHEN I resize the page or view the site on various screens and devices
 THEN I am presented with a responsive layout that adapts to my viewport
 ```
-## Optional Criteria
-
-These are additional student added criteria listed here for reference:
-```
-WHEN I click a theme option
-THEN the site changes its color scheme accordingly
-WHEN I scroll down the page
-THEN I can still access menu options to make navigating the site simpler
 
 ## Mock-Up
 
