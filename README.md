@@ -16,11 +16,13 @@ Runs in the browser for mobile, tablet, laptop, and PC devices.
 
 ## Usage
 
-Portfolio website built to showcase skills and qualifications.
+You can visit the live application at - https://maximusdecimalusmeridius.github.io/dev-portfolio/
+
+![site-thumbnail](./assets/images/site-thumbnail.png "Website Thumbnail")
 
 ## Credits
 
-Built from scratch by me.
+ All site images were prompted by me and created by [Midjourney](https://www.midjourney.com).
 
 ## License
 
