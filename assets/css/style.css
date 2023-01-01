@@ -154,6 +154,11 @@ main {
     flex-direction: column;
 }
 
+/* Sets the margin for when scrolling to a section of text */
+#about-me, #work, #contact-me {
+    scroll-margin-top: 100px;
+}
+
 /* Section cards are composed of two sections - title (30% width) and content (70% width)
 Flex direction changed to column for @media queries < 480 pixels */
 .section-card {
