@@ -226,15 +226,25 @@ queries <= 480 pixels */
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: purple;
 }
 
 #left-button {
     left: 0;
+    display: none;
 }
 
 #card-track {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-track div {
+    width: 400px;
+    height: 200px;
 }
 
 #right-button {
