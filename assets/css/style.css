@@ -208,6 +208,7 @@ queries <= 480 pixels */
     border-radius: 2px;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .work-card-title {
@@ -231,15 +232,6 @@ queries <= 480 pixels */
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-/* #test {
-    opacity: .8;
-}
-
-#test:hover,
-#test:active {
-    opacity: 1;
-} */
 
 .work-card:hover .work-card-img,
 .work-card:active .work-card-img {
